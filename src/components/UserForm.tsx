@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { addUser, updateUser, User } from '../redux/userSlice';
 import { useNavigate, useParams } from 'react-router-dom';
-import { RootState,useAppDispatch } from '../redux/store';
-
-
-
+import { RootState, useAppDispatch } from '../redux/store';
+import styles from './UserForm.module.css';
 
 const UserForm: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -72,94 +70,81 @@ const UserForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">
+    <div className={styles.container}>
+      <h2 className={styles.title}>
         {isEditing ? 'Edit User' : 'Add New User'}
       </h2>
-      <form onSubmit={handleSubmit} className="bg-white shadow rounded p-6">
-        <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Name</label>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label>Name</label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Email</label>
+        <div className={styles.formGroup}>
+          <label>Email</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
             required
           />
         </div>
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Address</h3>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-gray-700 mb-2">Street</label>
-              <input
-                type="text"
-                name="street"
-                value={formData.street}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2">Suite</label>
-              <input
-                type="text"
-                name="suite"
-                value={formData.suite}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              />
-            </div>
+        <h3 className={styles.subtitle}>Address</h3>
+        <div className={styles.grid}>
+          <div className={styles.formGroup}>
+            <label>Street</label>
+            <input
+              type="text"
+              name="street"
+              value={formData.street}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-4">
-            <div>
-              <label className="block text-gray-700 mb-2">City</label>
-              <input
-                type="text"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2">Zipcode</label>
-              <input
-                type="text"
-                name="zipcode"
-                value={formData.zipcode}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-                required
-              />
-            </div>
+          <div className={styles.formGroup}>
+            <label>Suite</label>
+            <input
+              type="text"
+              name="suite"
+              value={formData.suite}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label>City</label>
+            <input
+              type="text"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label>Zipcode</label>
+            <input
+              type="text"
+              name="zipcode"
+              value={formData.zipcode}
+              onChange={handleChange}
+              required
+            />
           </div>
         </div>
-        <div className="flex space-x-2">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded"
-          >
+        <div className={styles.buttonGroup}>
+          <button type="submit" className={styles.submitButton}>
             {isEditing ? 'Update User' : 'Add User'}
           </button>
           <button
             type="button"
             onClick={() => navigate('/users')}
-            className="bg-gray-500 text-white px-4 py-2 rounded"
+            className={styles.cancelButton}
           >
             Cancel
           </button>

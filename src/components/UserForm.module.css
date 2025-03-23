@@ -1,0 +1,90 @@
+/* UserForm.module.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFDF6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #4C5372;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 16px;
+    color: #7C7E9D;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #4C5372;
+  }
+  
+  .formGroup input {
+    padding: 8px;
+    border: 1px solid #949AB1;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .submitButton {
+    background-color: #10b981;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #059669;
+  }
+  
+  .cancelButton {
+    background-color: #E2D4E0;
+    color: #4C5372;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cancelButton:hover {
+    background-color: #d1bfcf;
+  }
+  

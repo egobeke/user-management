@@ -1,0 +1,103 @@
+/* UserDetails.module.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4C5372; 
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.card {
+    background-color: #FFFDF6; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2D4E0; 
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4C5372; 
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 1rem;
+    color: #7C7E9D; 
+    margin-bottom: 10px;
+}
+
+.info span {
+    font-weight: bold;
+    color: #4C5372;
+}
+
+.address {
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #949AB1; 
+}
+
+.address h4 {
+    font-weight: bold;
+    color: #4C5372;
+    margin-bottom: 4px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.editButton,
+.backButton {
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.editButton {
+    background-color: #E2D4E0; 
+    color: #4C5372;
+}
+
+.editButton:hover {
+    background-color: #949AB1; 
+    color: white;
+}
+
+.backButton {
+    background-color: #7C7E9D; 
+    color: white;
+}
+
+.backButton:hover {
+    background-color: #4C5372; 
+}
+
+.notFound {
+    text-align: center;
+    padding: 20px;
+}
+
+.backLink {
+    color: #4C5372;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
